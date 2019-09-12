@@ -1,2 +1,25 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+    <!-- Content - Vision of the website-->
+    <main>
+        <div class="container" id="contentDiv">
+            <!-- Content div is populated dynamically as it is SPA-->
+            <button class="btn btn-lg btn-info" id="loginBtn">Login</button>
+            <button class="btn btn-lg btn-info" id="registerBtn">Register</button>
+        </div>
+        <div>
+            <!-- Error message block for server responses -->
+            <p id="errorMsgId" class="ml-2"></p>
+        </div>
+    </main>
+
+    <footer class="footer" id="footerDiv">
+        <!-- Start of footer -->
+            {{> footer}}
+        <!-- End of footer-->
+    </footer>
+        <!-- Optional and custom JavaScript served from handle bar template engine-->
+    {{> scripts}}
+
+        <!-- Custom JavaScripts-->
+    <script src="javascripts/scripts.js"></script>

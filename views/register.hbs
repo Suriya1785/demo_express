@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>  
+  <body class="text-center">
+    <div class="offset-md-4 col-md-4">
+      <form class="form-login" id="form-login">
+        <h1 class="h3 mb-3 font-weight-normal">User Registration</h1>
+
+        <label for="inputUserName" class="sr-only">User Name</label>
+        <input type="text" name="username" id="inputUserName" class="form-control" placeholder="UserName" required autofocus />
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required />
+
+        <label for="confirmPassword" class="sr-only">Confirm Password</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirm Password" required />
+
+        <label for="inputEmail" class="sr-only">Email Address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required />
+      
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn">Submit</button>
+        <button class="btn btn-lg btn-primary btn-block" type="reset" id="resetBtn">Reset</button>
+        <button class="btn btn-lg btn-info btn-block" type="button" id="cancelBtn">Cancel</button>
+
+        <br />
+        <div class="alert alert-success hidden" role="alert" id="msg"></div>  
+
+        {{> footer}}
+      </form>
+    </div>
+    {{> scripts}}
+  </body>
+</html>

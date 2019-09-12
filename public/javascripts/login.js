@@ -1,0 +1,47 @@
+$(function() {
+    $('#form-login').on('submit', (e) => {
+        e.preventDefault();
+
+        let data = {
+            "email": $('#inputEmail').val(),
+            "password": $('#inputPassword').val()
+        };
+
+        $.post("http://localhost:3000/users/", data, function() {})
+            .done(function(res) {
+                console.log(success);
+                // $('#msg').removeClass('alert-danger');
+                // $('#msg').addClass('alert-success');
+                // $('#msg').html('Success!');
+
+                // $('#inputEmail').val('');
+                // $('#inputEmail').attr("disabled", true);
+                // $('#inputPassword').val('');
+                // $('#inputPassword').attr("disabled", true);
+
+                // $('#lock').attr('src', 'img/unlock.png');
+
+                // $('#submitBtn').hide();
+                // $('#logoutBtn').show();
+                // $('#logoutBtn').focus();
+            })
+            .fail(function(e) {
+                console.log(e);
+                //     if (e.status === 401) {
+                //       $('#msg').html('Account locked!');
+                //     } else if (e.status === 403) {
+                //       $('#msg').html('Invalid Creds!');
+                //     } else {
+                //       $('#msg').html(`Error: ${e.status}`);
+                //     }
+
+                //     $('#msg').removeClass('alert-success');
+                //     $('#msg').addClass('alert-danger');  
+                //     $('#inputEmail').focus();
+                //   });
+                //   $('#msg').show();
+            });
+    })
+
+
+});
