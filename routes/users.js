@@ -74,7 +74,7 @@ var insertUser = (username, email, password) => {
 
     // ensure no dups
     var duplicateUsers = users.filter((user) => {
-        return user.name === username;
+        return user.username === username;
     });
 
     // verify duplicate email validation

@@ -18,8 +18,6 @@ app.set('view engine', 'hbs');
 
 //register hbs partials
 hbs.registerPartials(__dirname + '/views/partials');
-//set view engine
-app.set('view engine', 'hbs');
 
 // partials
 hbs.registerHelper('getCurrentYear', function() {

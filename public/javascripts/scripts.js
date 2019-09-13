@@ -64,10 +64,10 @@ function getLeagues() {
 function showLogin() {
     $("#contentDiv").empty();
     $("#contentDiv")
-        .attr("class", "container justified-content-center")
+        .attr("class", "container justified-content-center text-center")
         // Home Section
         .append($("<section/>")
-            .attr("class", "row")
+            // .attr("class", "row")
             .attr("id", "loginSection")
             .append($("<div/>")
                 .attr("id", "loginDiv")
@@ -90,7 +90,7 @@ function showLogin() {
 
     // Add buttons for login section
     $("#form-login").append($("<button/>")
-            .attr("class", "btn btn-lg btn-primary btn-block")
+            .attr("class", "btn btn-lg btn-primary mr-1 mt-1")
             .attr("id", "submitBtn")
             .attr("type", "submit")
             .on("click", function(e) {
@@ -99,7 +99,7 @@ function showLogin() {
             })
             .html("Log in"))
         .append($("<button/>")
-            .attr("class", "btn btn-lg btn-primary btn-block")
+            .attr("class", "btn btn-lg btn-secondary mr-1 mt-1")
             .attr("id", "cancelBtn")
             .attr("type", "button")
             .on("click", function(e) {
@@ -108,10 +108,11 @@ function showLogin() {
             })
             .html("Cancel"))
         .append($("<button/>")
-            .attr("class", "btn btn-lg btn-primary btn-block hidden")
+            .attr("class", "btn btn-lg btn-danger hidden mt-1")
             .attr("id", "logoutBtn")
             .attr("type", "button")
             .html("Log out"))
+    $("#logoutBtn").hide();
 }
 
 
@@ -222,7 +223,7 @@ function loadleaguesForLeagueSection(leagues, leagueCode) {
             .attr("class", "font-italic"))
         // League Dropdown Div and DDL
         .append($("<div>")
-            .attr("class", "row")
+            // .attr("class", "row")
             .append($("<label/>")
                 .attr("class", "d-none d-md-inline")
                 .attr("for", "selectLeagueList")
